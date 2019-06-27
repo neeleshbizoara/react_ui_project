@@ -9,6 +9,7 @@ I have executed "create-react-app react-complete-guide--scripts-version 1.1.5" c
 
 Must Rest this link: ßhttps://medium.codaisseur.com/what-does-create-react-app-do-3843a601094a
 
+###Component
 Components are the core building block of React apps. Actually, React
 really is just a library for creating components in its core.
 
@@ -32,8 +33,10 @@ ways:
  (using ES6 arrow functions as shown here is recommended but optional)
 2. class-based components (also referred to as "containers", "smart" or "stateful"
 components) => 
-```class Cmp extends Component { 
+```
+class Cmp extends Component { 
     render () {
         return <div>some JSX</div> 
         } 
-    }```
+    }
+```
