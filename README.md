@@ -40,3 +40,12 @@ class Cmp extends Component {
         } 
     }
 ```
+######
+Expression in JSX (Outputting Dynamic Content)
+```
+class Cmp extends Component { 
+    render () {
+        return <p>Some JSX!! {Math.floor(Math.random() * 30)}</p>
+        } 
+    }
+```
