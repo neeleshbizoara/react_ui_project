@@ -49,3 +49,45 @@ class Cmp extends Component {
         } 
     }
 ```
+
+ClassName in JSX is a attribute.
+Also we can pass attributes to component,
+
+Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+######
+Parent Component
+```
+import React, { Component } from 'react';
+import './App.css';
+import Person from './Person/Person';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        
+          <h1>Welcome to React</h1>
+          <Person name="Max" age="10"/>
+          <Person name="Min" age="20"/>
+          <Person name="Avg" age="15"/>
+      </div>
+    );
+  }
+}
+```
+
+######
+Child Component
+```
+import React from 'react';
+
+const person = (prop) => {
+    return <div className="Person">
+        <p>Math Expression Output:  {Math.floor(Math.random() * 30)}</p>
+        <p>{prop.name} : {prop.age}</p>
+        </div>
+}
+
+export default person;
+```
