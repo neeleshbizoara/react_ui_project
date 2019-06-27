@@ -49,6 +49,8 @@ class Cmp extends Component {
         } 
     }
 ```
+###
+Props
 
 ClassName in JSX is a attribute.
 Also we can pass attributes to component,
