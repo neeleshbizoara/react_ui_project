@@ -5,6 +5,7 @@ import React from 'react'
 import { useState } from 'react';
 
 const another = () => {
+    // creatElement can take multiple parameters, but 3 argument is mandatry.
     return React.createElement('div', null, React.createElement('h1', { className: 'another' }, 'Hi, I\'m React app!!!'));
     // The above code is equivalent to 
     // Note: class etc. can not be used in JSX as it is reserved keyword.
