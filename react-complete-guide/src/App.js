@@ -3,6 +3,26 @@ import './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
+  state = {
+    person: [
+      {name: 'Neelesh', age: 32},
+      {name: 'Renu', age: 28},
+      {name: 'Avni', age: 1.8},
+    ]
+  }
+
+  switchClickHandler = () => {
+    // DON'T DO THIS 
+    // this.state.person[0].name = this.state.person[0].name +' Bizoara';
+    this.setState({
+      person: [
+        {name: 'Neelesh Bizoara', age: 32},
+        {name: 'Renu Bizoara', age: 28},
+        {name: 'Avni Bizoara', age: 1.8},
+      ]
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -28,6 +48,12 @@ class App extends Component {
           And these children are now output with this syntax,
           
           of course you don't have to wrap it in a paragraph, you can use it anywhere in your jsx code,</div>
+
+          <div>Now will see state</div>
+          <button onClick={this.switchClickHandler}>Switch Name</button>
+          <Person name={this.state.person[0].name} age={this.state.person[0].age}></Person>
+          <Person name={this.state.person[1].name} age={this.state.person[1].age}></Person>
+          <Person name={this.state.person[2].name} age={this.state.person[2].age}></Person>
       </div>
     );
   }
